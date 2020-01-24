@@ -1,0 +1,15 @@
+{:paths ["src"]
+ :deps {org.clojure/clojure            {:mvn/version "1.10.0"}}
+
+ :aliases {:nrepl
+           {:extra-paths ["test"]
+            :extra-deps {org.clojure/clojure           {:mvn/version "1.10.0"}
+                         healthsamurai/matcho           {:mvn/version "0.3.3"}
+                         cider/cider-nrepl             {:mvn/version "0.21.0"}
+                         refactor-nrepl/refactor-nrepl {:mvn/version "2.4.0"}}}
+
+           :test {:extra-paths ["test"]
+                  :extra-deps {com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner"
+                                                          :sha     "3cb0a9daf1cb746259dc8309b218f9211ad3b33b"}}
+                  :jvm-opts ^:replace ["-XX:-OmitStackTraceInFastThrow" ]
+                  :main-opts ["-m" "cognitect.test-runner"]}}}
