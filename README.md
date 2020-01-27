@@ -65,18 +65,6 @@ Make request and see aidbox logs you should see generated logs like:
 `{"ev": "audit", "uri": "....", "uid": "..."}`
 
 
-## Dev
-
-Lambda.code - should be one pure function definition.
-You can develope and test function in project like this - see src/ test/
-
-
-```
-make repl # start repl
-make test # run tests
-
-```
-
 
 ## Access Policy clj engine
 
@@ -144,5 +132,17 @@ clj:  |
       {:allow false
        :reason "Reason why for debug"
        :log {:msg "Data to log"}}))
+
+```
+
+## Dev
+
+Lambda.code - should be one pure function definition.
+You can develope and test function in project like this - see src/ test/
+
+
+```
+make repl # start repl
+make test # run tests
 
 ```
